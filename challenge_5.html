@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html>
+
+    <title> 1000 rows multiplication table </title>
+
+    <body onload="insertRow()">
+
+            Enter the number: <input type="text" id="tf">
+            <button onclick="insertRow()">Generate</button>
+            <table id="num" border = 1 > </table>
+
+            <script>
+
+                function insertRow(){
+                    
+                    var j = document.getElementById("tf").value;
+                    var i = 1;
+                    var text = "";
+                    for (; j*i <= 1000 ; i++) {
+                        
+                        text += "<tr><td>" + j + "x" + i + "</td>" + "<td>" + j*i + "</td>" + "</tr>";
+
+                    }
+                    document.getElementById("num").innerHTML = text;
+
+                }
+            </script>
+    </body>
+
+</html>

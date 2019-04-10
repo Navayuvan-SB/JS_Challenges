@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+
+    <title> 1000 rows in table</title>
+
+    <body onload="insertRow()">
+            <table id="num" border = 1 > </table>
+
+            <script>
+
+                if (localStorage.getItem("i") > 1){
+                    var text = localStorage.getItem("text");
+                    var i = localStorage.getItem("i");
+                }
+                else{
+                    var text = "", i = 1;
+                }
+
+                function insertRow(){
+                    
+                    text += "<tr><td>" + i + "</td></tr>";
+
+                    i++;
+
+                    localStorage.setItem("text", text);
+                    localStorage.setItem("i", i);
+
+                    document.getElementById("num").innerHTML = text;
+                }
+            </script>
+    </body>
+
+</html>
