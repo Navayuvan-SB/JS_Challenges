@@ -9,25 +9,25 @@
 
             <script>
 
-                if (localStorage.getItem("i") > 1){
-                    var text = localStorage.getItem("text");
-                    var i = localStorage.getItem("i");
+                if (localStorage.getItem("cthree") > 1){
+                    var text3 = localStorage.getItem("text3");
+                    var cthree = localStorage.getItem("cthree");
                 }
                 else{
-                    var text = "", i = 1;
+                    var text3 = "", cthree = 1;
                 }
 
                 function insertRow(){
                     
-                    if (i*5 <= 1000){
-                        text += "<tr><td>" + i*5 + "</td></tr>";
+                    if (cthree*5 <= 1000){
+                        text3 += "<tr><td>" + cthree*5 + "</td></tr>";
 
-                        i++;
+                        cthree++;
 
-                        localStorage.setItem("text", text);
-                        localStorage.setItem("i", i);
+                        localStorage.setItem("text3", text3);
+                        localStorage.setItem("cthree", cthree);
                     }
-                    document.getElementById("num").innerHTML = text;
+                    document.getElementById("num").innerHTML = text3;
 
                 }
             </script>

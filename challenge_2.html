@@ -9,24 +9,24 @@
 
             <script>
 
-                if (localStorage.getItem("i") > 1){
-                    var text = localStorage.getItem("text");
-                    var i = localStorage.getItem("i");
+                if (localStorage.getItem("ctwo") > 1){
+                    var text2 = localStorage.getItem("text2");
+                    var ctwo = localStorage.getItem("ctwo");
                 }
                 else{
-                    var text = "", i = 1;
+                    var text2 = "", ctwo = 1;
                 }
 
                 function insertRow(){
                     
-                    text += "<tr><td>" + i + "</td></tr>";
+                    text2 += "<tr><td>" + ctwo + "</td></tr>";
 
-                    i++;
+                    ctwo++;
 
-                    localStorage.setItem("text", text);
-                    localStorage.setItem("i", i);
+                    localStorage.setItem("text2", text2);
+                    localStorage.setItem("ctwo", ctwo);
 
-                    document.getElementById("num").innerHTML = text;
+                    document.getElementById("num").innerHTML = text2;
                 }
             </script>
     </body>
